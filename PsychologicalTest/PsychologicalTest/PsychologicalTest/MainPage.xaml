@@ -20,7 +20,26 @@
         <ScrollView Grid.Row="1"  >
             <StackLayout Margin="30,0,30,150">
 
-                <buttons:SfButton x:Name="SfButton1" WidthRequest="100" Text="행운의 로또번호" BackgroundColor="#C007DB">
+                <buttons:SfButton x:Name="SfButton1" WidthRequest="100" FontSize="Medium" Text="행운의 로또번호" BackgroundColor="#C007DB" Margin="0,0,0,10">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfButton>
+
+
+                <buttons:SfButton x:Name="SfButton2" WidthRequest="100" FontSize="Medium" Text="Button" BackgroundColor="#9913F2" Margin="0,0,0,10">
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
@@ -38,26 +57,7 @@
                     </VisualStateManager.VisualStateGroups>
                 </buttons:SfButton>
 
-
-                <buttons:SfButton x:Name="SfButton2" WidthRequest="100" Text="Button" BackgroundColor="#9913F2">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="TextColor" Value="White" />
-                                </VisualState.Setters>
-                            </VisualState>
-
-                            <VisualState x:Name="Pressed">
-                                <VisualState.Setters>
-                                    <Setter Property="TextColor" Value="Black" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
-                </buttons:SfButton>
-
-                <buttons:SfButton x:Name="SfButton3" WidthRequest="100" Text="Button" BackgroundColor="#F907B9">
+                <buttons:SfButton x:Name="SfButton3" WidthRequest="100" FontSize="Medium" Text="Button" BackgroundColor="#F907B9" Margin="0,0,0,10">
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
