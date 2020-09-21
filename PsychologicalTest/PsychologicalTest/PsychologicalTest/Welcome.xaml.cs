@@ -16,5 +16,12 @@ namespace PsychologicalTest
         {
             InitializeComponent();
         }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await Task.Delay(1500);
+            Application.Current.MainPage = new NavigationPage(new MainPage());
+        }
+
     }
 }
