@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychologicalTest.LuckyNumberPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="Center">
+            <Image Source="{Binding number1}" Aspect="AspectFit" />
+            <Image Source="{Binding number2}" Aspect="AspectFit" />
+            <Image Source="{Binding number3}" Aspect="AspectFit" />
+            <Image Source="{Binding number4}" Aspect="AspectFit" />
+            <Image Source="{Binding number5}" Aspect="AspectFit" />
+            <Image Source="{Binding number6}" Aspect="AspectFit" />
+        </StackLayout>
+        <Image Source="WelcomeImage" Grid.Row="1"/>
+        <Button Text="click" Clicked="Button_Clicked" Grid.Row="2"/>
+    </Grid>
+</ContentPage>

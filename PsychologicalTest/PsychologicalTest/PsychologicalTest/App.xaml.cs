@@ -8,9 +8,12 @@ namespace PsychologicalTest
     {
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzE5OTQyQDMxMzgyZTMyMmUzMFloNCtjUUtXL21NR1dnbTJZY2pVek5zTlY4ZGdueHZQVEhMWldFeFVhcVE9");
+
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Welcome());
+
         }
 
         protected override void OnStart()

@@ -17,5 +17,10 @@ namespace PsychologicalTest
         {
             InitializeComponent();
         }
+
+        private void SfButton1_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new LuckyNumberPage());
+        }
     }
 }

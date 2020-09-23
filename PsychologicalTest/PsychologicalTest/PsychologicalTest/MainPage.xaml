@@ -2,15 +2,87 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
-             x:Class="PsychologicalTest.MainPage">
+             x:Class="PsychologicalTest.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="3*"/>
 
+
+            </Grid.RowDefinitions>
+        <Image  Grid.Row="0" Source="MainImage" HorizontalOptions="Center" VerticalOptions="FillAndExpand" Aspect="AspectFit" />
+        <ScrollView Grid.Row="1"  >
+            <StackLayout Margin="30,0,30,150">
+
+                <buttons:SfButton x:Name="SfButton1" WidthRequest="100" FontSize="Medium" Text="test" BackgroundColor="#C007DB" Margin="0,0,0,10" Clicked="SfButton1_Clicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfButton>
+
+
+                <buttons:SfButton x:Name="SfButton2" WidthRequest="100" FontSize="Medium" Text="Button" BackgroundColor="#9913F2" Margin="0,0,0,10">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfButton>
+
+                <buttons:SfButton x:Name="SfButton3" WidthRequest="100" FontSize="Medium" Text="Button" BackgroundColor="#F907B9" Margin="0,0,0,10">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Black" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfButton>
+
+
+
+
+              
+            </StackLayout>
+        
+        </ScrollView>
+
+        </Grid>
+    </StackLayout>
 </ContentPage>
