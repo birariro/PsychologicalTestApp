@@ -20,7 +20,7 @@
         <ScrollView Grid.Row="1"  >
             <StackLayout Margin="30,0,30,150">
 
-                <buttons:SfButton x:Name="SfButton1" WidthRequest="100" FontSize="Medium" Text="행운의 로또번호" BackgroundColor="#C007DB" Margin="0,0,0,10">
+                <buttons:SfButton x:Name="SfButton1" WidthRequest="100" FontSize="Medium" Text="test" BackgroundColor="#C007DB" Margin="0,0,0,10" Clicked="SfButton1_Clicked">
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
