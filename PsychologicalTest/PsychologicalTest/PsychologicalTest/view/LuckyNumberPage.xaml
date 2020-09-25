@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychologicalTest.LuckyNumberPage"
+             x:Name="lucky"
+             >
+
+
+
+    
+    <Grid  Padding="0,30,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Orientation="Horizontal" Grid.Row="0" HorizontalOptions="Center">
+            <Image Source="{Binding Path=BindingContext.numberModels.number1_1 , Source={x:Reference lucky}}" Aspect="AspectFit" />
+            <Image Source="{Binding Path=BindingContext.numberModels.number1_2 , Source={x:Reference lucky}}" Aspect="AspectFit" />
+            <Image Source="{Binding Path=BindingContext.numberModels.number1_3 , Source={x:Reference lucky}}" Aspect="AspectFit" />
+            <Image Source="{Binding Path=BindingContext.numberModels.number1_4 , Source={x:Reference lucky}}" Aspect="AspectFit" />
+            <Image Source="{Binding Path=BindingContext.numberModels.number1_5 , Source={x:Reference lucky}}" Aspect="AspectFit" />
+            <Image Source="{Binding Path=BindingContext.numberModels.number1_6 , Source={x:Reference lucky}}" Aspect="AspectFit" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="1" HorizontalOptions="Center">
+            <Image Source="{Binding numberModels.number2_1}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number2_2}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number2_3}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number2_4}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number2_5}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number2_6}" Aspect="AspectFit" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="Center">
+            <Image Source="{Binding numberModels.number3_1}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number3_2}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number3_3}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number3_4}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number3_5}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number3_6}" Aspect="AspectFit" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="3" HorizontalOptions="Center">
+            <Image Source="{Binding numberModels.number4_1}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number4_2}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number4_3}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number4_4}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number4_5}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number4_6}" Aspect="AspectFit" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="4" HorizontalOptions="Center">
+            <Image Source="{Binding numberModels.number5_1}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number5_2}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number5_3}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number5_4}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number5_5}" Aspect="AspectFit" />
+            <Image Source="{Binding numberModels.number5_6}" Aspect="AspectFit" />
+        </StackLayout>
+        
+        <Image Source="WelcomeImage" Grid.Row="5"/>
+        <Button x:Name="Xbuton" Text="click"  Grid.Row="6" Command="{Binding ClickEvent}" CommandParameter="{Binding Text,Source={x:Reference Xbuton}}"/>
+    </Grid>
+</ContentPage>
